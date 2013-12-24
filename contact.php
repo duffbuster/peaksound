@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Contact - Modern Business - Start Bootstrap Template</title>
+    <title>Contact - PeaksoundVA</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-          <a class="navbar-brand" href="index.html">Modern Business</a>
+          <a class="navbar-brand" href="index.html">PeaksoundVA</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,34 +37,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li class="active"><a href="contact.php">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="portfolio-1-col.html">1 Column Portfolio</a></li>
-                <li><a href="portfolio-2-col.html">2 Column Portfolio</a></li>
-                <li><a href="portfolio-3-col.html">3 Column Portfolio</a></li>
-                <li><a href="portfolio-4-col.html">4 Column Portfolio</a></li>
-                <li><a href="portfolio-item.html">Single Portfolio Item</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="blog-home-1.html">Blog Home 1</a></li>
-                <li><a href="blog-home-2.html">Blog Home 2</a></li>
-                <li><a href="blog-post.html">Blog Post</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="full-width.html">Full Width Page</a></li>
-                <li><a href="sidebar.html">Sidebar Page</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="404.html">404</a></li>
-                <li><a href="pricing.html">Pricing Table</a></li>
-              </ul>
-            </li>
+            
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -77,7 +50,7 @@
       <div class="row">
       
         <div class="col-lg-12">
-          <h1 class="page-header">Contact <small>We'd Love to Hear From You!</small></h1>
+          <h1 class="page-header">Contact <small>Hire us! Love us! Talk to us!</small></h1>
           <ol class="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li class="active">Contact</li>
@@ -95,7 +68,7 @@
 
         <div class="col-sm-8">
           <h3>Let's Get In Touch!</h3>
-          <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Hire us for your next wedding and make it an event you'll always remember. Rent sound for your bar show and rock the night away.</p>
 			<?php  
 
                 // check for a successful form post  
@@ -133,20 +106,16 @@
         </div>
 
         <div class="col-sm-4">
-          <h3>Modern Business</h3>
-          <h4>A Start Bootstrap Template</h4>
-          <p>
-            5555 44th Street N.<br>
-            Bootstrapville, CA 32323<br>
-          </p>
-          <p><i class="fa fa-phone"></i> <abbr title="Phone">P</abbr>: (555) 984-3600</p>
-          <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a></p>
-          <p><i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+          <h3>PeaksoundVA</h3>
+          
+          <p><i class="fa fa-phone"></i> <abbr title="Phone">P</abbr>: (520) 477-6863</p>
+          <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a href="mailto:peaksoundva@gmail.com">peaksoundva@gmail.com</a></p>
+          
           <ul class="list-unstyled list-inline list-social-icons">
-            <li class="tooltip-social facebook-link"><a href="#facebook-page" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-            <li class="tooltip-social linkedin-link"><a href="#linkedin-company-page" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+            <li class="tooltip-social facebook-link"><a href="https://www.facebook.com/peaksoundva" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            
             <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-            <li class="tooltip-social google-plus-link"><a href="#google-plus-page" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            
           </ul>
         </div>
 
@@ -161,7 +130,7 @@
       <footer>
         <div class="row">
           <div class="col-lg-12">
-            <p>Copyright &copy; Company 2013</p>
+            <p>Copyright &copy; PeaksoundVA 2013</p>
           </div>
         </div>
       </footer>
