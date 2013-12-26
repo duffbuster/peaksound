@@ -1,5 +1,7 @@
 <?php
 
+// Something's broken in here!! Work with bret to fix it
+
 // check for form submission - if it doesn't exist then send back to contact form
 if (!isset($_POST['save']) || $_POST['save'] != 'contact') {
     header('Location: contact.php'); exit;
@@ -43,7 +45,7 @@ $email_content .= "Message:\n\n$message";
 	
 // send the email
 //ENTER YOUR INFORMATION BELOW FOR THE FORM TO WORK!
-@mail ('peaksoundva@gmail.com', 'PeaksoundVA - Contact Form Submission', $email_content, $headers);
+mail ('peaksoundva@gmail.com', 'PeaksoundVA - Contact Form Submission', $email_content, $headers);
 	
 // send the user back to the form
 header('Location: contact.html?s='.urlencode('Thank you for your message.')); exit;
