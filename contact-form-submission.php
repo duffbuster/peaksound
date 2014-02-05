@@ -56,7 +56,7 @@ $mail->addTo('peaksoundva@gmail.com')->
        setText($email_content)->
        addMessageHeader($headers);
 
-$response = $sendgrid->web->send($email);
+$response = $sendgrid->web->send($mail);
 var_dump($response);
        //setHtml('<strong>Hello World!</strong>');
 //mail ('peaksoundva@gmail.com', 'PeaksoundVA - Contact Form Submission', $email_content, $headers);
