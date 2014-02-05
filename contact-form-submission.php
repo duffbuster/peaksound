@@ -1,7 +1,11 @@
 <?php
 
 // Something's broken in here!! Work with bret to fix it
+require_once '/unirest-php/lib/Unirest.php';
+require_once '/sendgrid-php/lib/SendGrid.php';
+SendGrid::register_autoloader();
 
+$sendgrid = new SendGrid('azure_a52dce55d5229d7ab9f48a768ca530dd@azure.com', '1wcxhjvy');
 // check for form submission - if it doesn't exist then send back to contact form
 if (!isset($_POST['save']) || $_POST['save'] != 'contact') {
     header('Location: contact.php'); exit;
@@ -45,7 +49,17 @@ $email_content .= "Message:\n\n$message";
 	
 // send the email
 //ENTER YOUR INFORMATION BELOW FOR THE FORM TO WORK!
-mail ('peaksoundva@gmail.com', 'PeaksoundVA - Contact Form Submission', $email_content, $headers);
+$mail = new SendGrid\Email();
+$mail->addTo('peaksoundva@gmail.com')->
+       setFrom($email_address)->
+       setSubject('PeaksoundVA - Contact Form Submission')->
+       setText($email_content)->
+       addMessageHeader($headers);
+
+$response = $sendgrid->web->send($email);
+var_dump($response);
+       //setHtml('<strong>Hello World!</strong>');
+//mail ('peaksoundva@gmail.com', 'PeaksoundVA - Contact Form Submission', $email_content, $headers);
 	
 // send the user back to the form
 header('Location: contact.html?s='.urlencode('Thank you for your message.')); exit;
