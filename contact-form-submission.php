@@ -3,9 +3,10 @@
 // Something's broken in here!! Work with bret to fix it
 require_once '/unirest-php/lib/Unirest.php';
 require_once '/sendgrid-php/lib/SendGrid.php';
+require_once '/swiftmailer/lib/swift_required.php';
 SendGrid::register_autoloader();
-$sendgrid_username = $_ENV['azure_a52dce55d5229d7ab9f48a768ca530dd@azure.com'];
-$sendgrid_password = $_ENV['1wcxhjvy'];
+$sendgrid_username = 'azure_a52dce55d5229d7ab9f48a768ca530dd@azure.com';
+$sendgrid_password = '1wcxhjvy';
 $sendgrid = new SendGrid($sendgrid_username, $sendgrid_password);
 $transport  = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587);
 $transport->setUsername($sendgrid_username);
