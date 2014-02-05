@@ -4,8 +4,14 @@
 require_once '/unirest-php/lib/Unirest.php';
 require_once '/sendgrid-php/lib/SendGrid.php';
 SendGrid::register_autoloader();
+$sendgrid_username = $_ENV['azure_a52dce55d5229d7ab9f48a768ca530dd@azure.com'];
+$sendgrid_password = $_ENV['1wcxhjvy'];
+$sendgrid = new SendGrid($sendgrid_username, $sendgrid_password);
+$transport  = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587);
+$transport->setUsername($sendgrid_username);
+$transport->setPassword($sendgrid_password);
 
-$sendgrid = new SendGrid('azure_a52dce55d5229d7ab9f48a768ca530dd@azure.com', '1wcxhjvy');
+$mailer     = Swift_Mailer::newInstance($transport);
 // check for form submission - if it doesn't exist then send back to contact form
 if (!isset($_POST['save']) || $_POST['save'] != 'contact') {
     header('Location: contact.php'); exit;
@@ -49,7 +55,20 @@ $email_content .= "Message:\n\n$message";
 	
 // send the email
 //ENTER YOUR INFORMATION BELOW FOR THE FORM TO WORK!
-$mail = new SendGrid\Email();
+$message    = new Swift_Message();
+$message->setTo('peaksoundva@gmail.com');
+$message->setFrom($email_address);
+$message->setSubject("PeaksoundVA - Contact Form Submission");
+$message->setBody($email_content);
+
+$header           = new Smtpapi\Header();
+$header->addSubVal("%how%", array("Owl"));
+
+$message_headers  = $message->getHeaders();
+$message_headers->addTextHeader("x-smtpapi", $header->toJsonString());
+
+$mailer->send($message);
+/*$mail = new SendGrid\Email();
 $mail->addTo('peaksoundva@gmail.com')->
        setFrom($email_address)->
        setSubject('PeaksoundVA - Contact Form Submission')->
@@ -57,7 +76,7 @@ $mail->addTo('peaksoundva@gmail.com')->
        addMessageHeader($headers);
 
 $response = $sendgrid->web->send($mail);
-var_dump($response);
+var_dump($response);*/
        //setHtml('<strong>Hello World!</strong>');
 //mail ('peaksoundva@gmail.com', 'PeaksoundVA - Contact Form Submission', $email_content, $headers);
 	
