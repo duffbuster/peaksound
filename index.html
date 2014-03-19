@@ -30,7 +30,9 @@
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
                 <!--<a class="navbar-brand" href="index.html">PeaksoundVA</a>-->
-                <a class="navbar-brand" href="index.html"><img src="css/logo.png" style="height: 25px;"></a>
+                <a class="navbar-brand" href="index.html">
+                    <img src="css/logo.png" style="height: 25px;">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -90,7 +92,9 @@
             <span class="icon-next"></span>
         </a>
     </div>
-    <div class="text-center"><h1>Pardon our dust! We're under construction!</h1></div>
+    <div class="text-center">
+        <h1>Pardon our dust! We're under construction!</h1>
+    </div>
     <div class="section">
 
         <div class="container">
@@ -142,6 +146,23 @@
         <script src="js/jquery-1.10.2.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/modern-business.js"></script>
+        <!-- Google analytics because Barth wanted it -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-46179704-1', 'peaksoundva.com');
+            ga('send', 'pageview');
+        </script>
 
 </body>
 
